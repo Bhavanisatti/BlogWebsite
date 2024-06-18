@@ -1,2 +1,1 @@
-This is a blog website it is used to Writing a blogs,reading and posting vlogs
-#using HTML,CSS,Node JS and mongo db for backend
+Here is the code for development of blog website for reading and writing posts using HTML,CSS,Node.js,MongoDB for data storage
