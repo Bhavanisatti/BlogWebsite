@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            background-image: url('"C:\Users\BHAVANI\Desktop\images\blog.jpg"');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .write-blog-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="container">
+        <h1>Blog Posts</h1>
+        <ul>
+            <% posts.forEach(post => { %>
+                <li><a href="/posts/<%= post._id %>"><%= post.title %></a></li>
+            <% }); %>
+        </ul>
+        <a href="/posts/new" class="write-blog-btn">Write Blog</a>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
